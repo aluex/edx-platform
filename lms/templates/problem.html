@@ -8,6 +8,13 @@
 <section class="problem-progress">
 </section>
 
+% if problem_is_timed:
+  <section class="time_limit">
+    <p>You started this problem at ${start_time.strftime("%Y-%m-%d %H:%M:%S %Z")}<br />
+    <b>You must manually click submit before ${end_time_to_display.strftime("%Y-%m-%d %H:%M:%S %Z")}</b></p>
+  </section>
+% endif
+
 <section class="problem">
   ${ problem['html'] }
 
